@@ -1,6 +1,7 @@
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { registrationSchema, type RegistrationDto } from './schema';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { Input } from '@erezerwacja/common-ui';
 
 export const RegistrationForm = () => {
   const {
@@ -17,34 +18,22 @@ export const RegistrationForm = () => {
 
   return (
     <form onSubmit={handleSubmit(handleLoginForm)}>
-      <div>
-        <input
-          type="email"
-          {...register('email')}
-          className="rounded-sm border-2 border-zinc-700"
-        />
-        {errors.email && <p className="text-red-500">{errors.email.message}</p>}
-      </div>
-      <div>
-        <input
-          type="password"
-          {...register('password')}
-          className="rounded-sm border-2 border-zinc-700"
-        />
-        {errors.password && (
-          <p className="red-500">{errors.password.message}</p>
-        )}
-      </div>
-      <div>
-        <input
-          type="password"
-          {...register('confirmPassword')}
-          className="rounded-sm border-2 border-zinc-700"
-        />
-        {errors.confirmPassword && (
-          <p className="red-500">{errors.confirmPassword.message}</p>
-        )}
-      </div>
+      <Input name="email" type="email" register={register} errors={errors} />
+
+      <Input
+        name="password"
+        type="password"
+        register={register}
+        errors={errors}
+      />
+
+      <Input
+        name="confirmPassword"
+        type="password"
+        register={register}
+        errors={errors}
+      />
+
       <div>
         <button type="submit">{isSubmitting ? 'Sending...' : 'Send'}</button>
       </div>
