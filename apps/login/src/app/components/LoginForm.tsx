@@ -1,7 +1,12 @@
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { loginSchema, type LoginDto } from '@erezerwacja/validators';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { createBrowserHistory } from 'history';
+
+import { loginSchema, type LoginDto } from '@erezerwacja/validators';
 import { Input } from '@erezerwacja/common-ui';
+
+const browserHistory = createBrowserHistory();
+const REDIRECT_URL = import.meta.env.VITE_REDIRECT_URL;
 
 export const LoginForm = () => {
   const {
@@ -14,6 +19,9 @@ export const LoginForm = () => {
 
   const handleLoginForm: SubmitHandler<LoginDto> = (data) => {
     console.log(data);
+    console.log({ REDIRECT_URL });
+    browserHistory.push(REDIRECT_URL);
+    // window.location();
   };
 
   return (
