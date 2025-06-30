@@ -4,6 +4,7 @@ import { createBrowserHistory } from 'history';
 
 import { loginSchema, type LoginDto } from '@erezerwacja/validators';
 import { Input } from '@erezerwacja/common-ui';
+import { loginAction } from '../../services/login';
 
 const browserHistory = createBrowserHistory();
 const REDIRECT_URL = import.meta.env.VITE_REDIRECT_URL;
@@ -19,10 +20,20 @@ export const LoginForm = () => {
 
   const handleLoginForm: SubmitHandler<LoginDto> = (data) => {
     console.log(data);
-    console.log({ REDIRECT_URL });
-    browserHistory.push(REDIRECT_URL);
+
+    const loginResult = loginAction(data);
+    if (loginResult.success) {
+      console.log('ok!');
+    }
+
+    // console.log({ REDIRECT_URL });
+    // browserHistory.push(REDIRECT_URL);
     // window.location();
+
+    // api request -> service -> OperationResult ( {success: true, data: {} } |  {success: false, error: string } )
   };
+
+  // throw new Error('Oh no!');
 
   return (
     <form onSubmit={handleSubmit(handleLoginForm)}>
