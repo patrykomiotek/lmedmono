@@ -14,6 +14,9 @@
     },
     {
       "path": "./libs/common-ui"
+    },
+    {
+      "path": "./libs/validators"
     }
   ]
 }

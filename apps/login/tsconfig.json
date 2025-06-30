@@ -3,6 +3,12 @@
   "include": [],
   "references": [
     {
+      "path": "../../libs/common-ui"
+    },
+    {
+      "path": "../../libs/validators"
+    },
+    {
       "path": "./tsconfig.app.json"
     },
     {

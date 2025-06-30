@@ -1,5 +1,5 @@
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { loginSchema, type LoginDto } from './schema';
+import { loginSchema, type LoginDto } from '@erezerwacja/validators';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Input } from '@erezerwacja/common-ui';
 
