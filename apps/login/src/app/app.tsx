@@ -1,9 +1,12 @@
-import NxWelcome from './nx-welcome';
+// import NxWelcome from './nx-welcome';
+
+import { LoginForm } from './components/LoginForm';
 
 export function App() {
   return (
     <div>
-      <NxWelcome title="@erezerwacja/login" />
+      {/* <NxWelcome title="@erezerwacja/login" /> */}
+      <LoginForm />
     </div>
   );
 }
