@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { DocumentDto } from '../types/Documents';
 
 interface Props {
@@ -23,7 +24,11 @@ export const DocumentsList = ({ documents, isLoading, isError }: Props) => {
     <div>
       {documents.map((elem) => (
         <div key={elem.id}>
-          <div>{elem.fields.title}</div>
+          <div>
+            <Link to={`/documents/${elem.id}`} className="text-blue-600">
+              {elem.fields.title}
+            </Link>
+          </div>
         </div>
       ))}
     </div>

@@ -12,3 +12,17 @@ export const fetchDocuments = async () => {
     return null;
   }
 };
+
+export const fetchDocument = async (id?: string) => {
+  if (!id) {
+    throw new Error('Id is required');
+  }
+
+  try {
+    const response = await api.get<DocumentDto>(`/documents/${id}`);
+    return response.data;
+  } catch {
+    console.log(`Error fetch document: ${id}`);
+    return null;
+  }
+};
