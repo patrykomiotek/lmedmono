@@ -7,6 +7,9 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import App from './app/app';
 
 import './styles.css';
+import { envSchema } from './validateEnvVars';
+
+envSchema.parse(import.meta.env);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
