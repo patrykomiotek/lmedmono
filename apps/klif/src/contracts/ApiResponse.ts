@@ -1,7 +1,7 @@
 enum ResponseCode {
-  NOT_ALLOWED = 123,
-  STH_WRONG = 2445,
-  INVALID = 2456,
+  NOT_ALLOWED = 123, // BE
+  STH_WRONG = 2445, // BE
+  INVALID = 2456, // BE
 }
 
 interface ApiResponse<T> {
@@ -10,3 +10,5 @@ interface ApiResponse<T> {
   data: T; // {}
   responseCode: ResponseCode; // 2456
 }
+
+// if
