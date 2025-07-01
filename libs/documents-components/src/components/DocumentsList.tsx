@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { DocumentDto } from '../types/Documents';
+import { DocumentDto } from '../../../documents-services/src/types/Document';
 
 interface Props {
   documents: DocumentDto[] | null | undefined;

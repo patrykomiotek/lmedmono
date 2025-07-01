@@ -1,4 +1,4 @@
-import { AirtableListResponse, DocumentDto } from '../types/Documents';
+import { AirtableListResponse, DocumentDto } from './types/Document.js';
 import { api } from './api';
 
 export const fetchDocuments = async () => {

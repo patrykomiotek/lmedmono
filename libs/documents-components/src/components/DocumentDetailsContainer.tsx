@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 
-import { fetchDocument } from '../services/documents';
+import { fetchDocument } from '@erezerwacja/documents-services';
 import { DocumentsDetails } from '../components/DocumentDetails';
 
 export const DocumentDetailsContainer = ({

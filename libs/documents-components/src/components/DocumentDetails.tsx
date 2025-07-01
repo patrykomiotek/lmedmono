@@ -1,4 +1,5 @@
-import { DocumentDto } from '../types/Documents';
+import { DocumentDto } from '@erezerwacja/documents-services';
+// import { DocumentDto } from '../../../documents-services/src/types/Document';
 
 interface Props {
   document: DocumentDto;

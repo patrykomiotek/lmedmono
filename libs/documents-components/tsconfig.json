@@ -3,10 +3,10 @@
   "include": [],
   "references": [
     {
-      "path": "../../libs/documents-components"
+      "path": "../documents-services"
     },
     {
-      "path": "./tsconfig.app.json"
+      "path": "./tsconfig.lib.json"
     },
     {
       "path": "./tsconfig.spec.json"

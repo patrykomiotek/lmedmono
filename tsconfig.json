@@ -29,6 +29,12 @@
     },
     {
       "path": "./apps/klif"
+    },
+    {
+      "path": "./libs/documents-components"
+    },
+    {
+      "path": "./libs/documents-services"
     }
   ]
 }
