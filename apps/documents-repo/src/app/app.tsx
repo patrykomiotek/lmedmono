@@ -5,7 +5,7 @@ import { Route, Routes, Link } from 'react-router-dom';
 import { HomePage } from './pages/HomePage';
 import { DocumentsPage } from './pages/DocumentsPage';
 import { CreateDocumentPage } from './pages/CreateDocumentPage';
-import { DocumentsDetailsPage } from './pages/DocumentsDetailsPage';
+import { DocumentDetailsPage } from './pages/DocumentDetailsPage';
 
 export function App() {
   return (
@@ -13,7 +13,7 @@ export function App() {
       <Menu />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/documents/:id" element={<DocumentsDetailsPage />} />
+        <Route path="/documents/:id" element={<DocumentDetailsPage />} />
         <Route path="/documents" element={<DocumentsPage />} />
         <Route path="/documents-create" element={<CreateDocumentPage />} />
 
