@@ -1,14 +1,16 @@
 import { useQuery } from '@tanstack/react-query';
-import { useParams } from 'react-router-dom';
 
 import { fetchDocument } from '../services/documents';
 import { DocumentsDetails } from '../components/DocumentDetails';
 
-export const DocumentsDetailsPage = () => {
-  const params = useParams<{ id: string }>();
+export const DocumentDetailsContainer = ({
+  publicId,
+}: {
+  publicId: string;
+}) => {
   const { data, isError, isLoading } = useQuery({
-    queryKey: ['documents', params.id],
-    queryFn: () => fetchDocument(params.id),
+    queryKey: ['documents', publicId],
+    queryFn: () => fetchDocument(publicId),
   });
 
   if (isLoading) {
