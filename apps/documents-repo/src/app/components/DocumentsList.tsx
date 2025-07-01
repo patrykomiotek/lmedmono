@@ -1,12 +1,12 @@
-import { useQuery } from '@tanstack/react-query';
-import { fetchDocuments } from '../services/documents';
+import { DocumentDto } from '../types/Documents';
 
-export const DocumentsList = () => {
-  const { data, isError, isLoading } = useQuery({
-    queryKey: ['documents'],
-    queryFn: fetchDocuments,
-  });
+interface Props {
+  documents: DocumentDto[] | null | undefined;
+  isLoading: boolean;
+  isError: boolean;
+}
 
+export const DocumentsList = ({ documents, isLoading, isError }: Props) => {
   if (isLoading) {
     return <h1>Loading...</h1>;
   }
@@ -14,8 +14,6 @@ export const DocumentsList = () => {
   if (isError) {
     return <h1>Oh no!</h1>;
   }
-
-  const documents = data;
 
   if (!documents) {
     return <h1>No documents</h1>;
