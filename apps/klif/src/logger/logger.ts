@@ -36,6 +36,8 @@ const getLevelColor = (level: string): string => {
   }
 };
 
+// transport, stream
+
 const baseConfig = {
   level: isProduction ? 'info' : 'debug',
   browser: {
