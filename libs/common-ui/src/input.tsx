@@ -22,6 +22,8 @@ export const Input = <T extends FieldValues>({
   label,
   type = 'text',
 }: InputProps<T>) => {
+  // throw new Error('Input error');
+
   return (
     <div>
       {label && <label htmlFor={name}>{label}</label>}

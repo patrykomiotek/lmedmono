@@ -17,6 +17,12 @@
     },
     {
       "path": "./libs/validators"
+    },
+    {
+      "path": "./apps/documents-repo-e2e"
+    },
+    {
+      "path": "./apps/documents-repo"
     }
   ]
 }

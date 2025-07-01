@@ -8,12 +8,15 @@
     "@babel/core": "^7.14.5",
     "@babel/preset-react": "^7.14.5",
     "@eslint/js": "^9.8.0",
+    "@nx/devkit": "21.2.1",
     "@nx/eslint": "21.2.1",
     "@nx/eslint-plugin": "21.2.1",
     "@nx/js": "^21.2.1",
+    "@nx/playwright": "21.2.1",
     "@nx/react": "^21.2.1",
     "@nx/vite": "21.2.1",
     "@nx/web": "21.2.1",
+    "@playwright/test": "^1.36.0",
     "@swc-node/register": "~1.9.1",
     "@swc/cli": "~0.6.0",
     "@swc/core": "~1.5.7",
@@ -31,6 +34,7 @@
     "eslint-config-prettier": "^10.0.0",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-jsx-a11y": "6.10.1",
+    "eslint-plugin-playwright": "^1.6.2",
     "eslint-plugin-react": "7.35.0",
     "eslint-plugin-react-hooks": "5.0.0",
     "jiti": "2.4.2",
@@ -53,11 +57,14 @@
   ],
   "dependencies": {
     "@hookform/resolvers": "^5.1.1",
+    "@tanstack/react-query": "^5.81.5",
+    "@tanstack/react-query-devtools": "^5.81.5",
     "axios": "^1.10.0",
     "history": "^5.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.59.0",
+    "react-router-dom": "6.29.0",
     "zod": "^3.25.67"
   }
 }
