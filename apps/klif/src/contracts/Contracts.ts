@@ -19,7 +19,7 @@ interface Contract {
 }
 
 // 1. search Patient
-// 2. Service (usługa wybierana z listy, porada lekarska, mona wybrać np. 5 usług)
+// 2. Service (usługa wybierana z listy, porada lekarska, mozna wybrać np. 5 usług)
 // 3. Contract dotyczy zarejestrowanej usługi (RegisteredService)
 // 4. RegisterStaff (osoba, która rejestruje),
 // 5. MedicalStaff (lekarz)

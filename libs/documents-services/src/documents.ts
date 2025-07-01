@@ -1,5 +1,30 @@
 import { AirtableListResponse, DocumentDto } from './types/Document.js';
 import { api } from './api';
+import axios, { AxiosStatic } from 'axios';
+
+// class DocumentService {
+//   api: AxiosStatic | undefined;
+
+//   constructor(API_BASE_URL: string, API_TOKEN: string) {
+//     this.api = axios.create({
+//       baseURL: API_BASE_URL,
+//       headers: {
+//         Authorization: `Bearer ${API_TOKEN}`,
+//       },
+//     })
+
+//     fetchDocuments = async () => {
+//       try {
+//         const response = await api.get<AirtableListResponse<DocumentDto>>(
+//           '/documents'
+//         );
+//         return response.data.records;
+//       } catch {
+//         console.log('Error fetchDocuments');
+//         return null;
+//       }
+//   }
+// }
 
 export const fetchDocuments = async () => {
   try {
