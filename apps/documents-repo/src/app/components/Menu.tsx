@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 export const Menu = () => {
   return (
     <div role="navigation">
-      <ul>
+      <ul className="flex space-x-2">
         <li>
           <Link to="/">Home</Link>
         </li>
