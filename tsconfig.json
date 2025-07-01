@@ -23,6 +23,12 @@
     },
     {
       "path": "./apps/documents-repo"
+    },
+    {
+      "path": "./apps/klif-e2e"
+    },
+    {
+      "path": "./apps/klif"
     }
   ]
 }
