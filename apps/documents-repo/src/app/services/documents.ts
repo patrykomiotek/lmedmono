@@ -26,3 +26,29 @@ export const fetchDocument = async (id?: string) => {
     return null;
   }
 };
+
+// { title, notes, type }
+
+export const createDocument = async (input: {
+  title: string;
+  notes: string;
+  type: string;
+}) => {
+  try {
+    const payload = {
+      records: [
+        {
+          fields: {
+            ...input,
+          },
+        },
+      ],
+    };
+
+    const response = await api.post<DocumentDto>('/documents', payload);
+    return response.data;
+  } catch {
+    console.log(`Error creating document`);
+    return null;
+  }
+};
