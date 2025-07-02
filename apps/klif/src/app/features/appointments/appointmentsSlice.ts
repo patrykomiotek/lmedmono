@@ -7,14 +7,14 @@ import {
   MedicalStaff,
 } from '../../../contracts/Contracts';
 
-interface appointmentState {
+interface AppointmentState {
   patient: Patient | null;
   service: Service | null;
   contract: Contract | null;
   medicalStaff: MedicalStaff | null;
 }
 
-const initialState: appointmentState = {
+const initialState: AppointmentState = {
   patient: null,
   service: null,
   contract: null,
