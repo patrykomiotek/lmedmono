@@ -8,7 +8,7 @@ interface RegistrationState {
 
 // Define the initial state using that type
 const initialState: RegistrationState = {
-  value: 0,
+  value: 5,
 };
 
 export const registrationSlice = createSlice({
@@ -18,6 +18,11 @@ export const registrationSlice = createSlice({
   reducers: {
     increment: (state) => {
       state.value += 1;
+
+      // return {
+      //   ...state,
+      //   value: state.value + 1
+      // }
     },
     decrement: (state) => {
       state.value -= 1;

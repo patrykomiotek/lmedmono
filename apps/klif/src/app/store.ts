@@ -7,6 +7,8 @@ import { registrationReducer } from './features/registration/registrationSlice';
 export const store = configureStore({
   reducer: {
     registration: registrationReducer,
+    // service: serviceReducer,
+
     // reducer: rootReducer,
     // middleware: (getDefaultMiddleware) =>
     //   getDefaultMiddleware().concat(yourMiddleware),
@@ -16,7 +18,7 @@ export const store = configureStore({
 // Get the type of our store variable
 export type AppStore = typeof store;
 // Infer the `RootState` and `AppDispatch` types from the store itself
-// export type RootState = ReturnType<AppStore['getState']>;
-export type RootState = ReturnType<typeof rootReducer>;
+export type RootState = ReturnType<AppStore['getState']>;
+// export type RootState = ReturnType<typeof rootReducer>;
 // Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
 export type AppDispatch = AppStore['dispatch'];
