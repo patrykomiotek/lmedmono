@@ -6,6 +6,7 @@ import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import { z } from 'zod';
 import {
   addPatient,
+  addService,
   AppointmentState,
   selectAppointment,
 } from '../../features/appointments/appointmentsSlice';
@@ -51,6 +52,9 @@ export const RegistrationForm = () => {
 
   const handleForm: SubmitHandler<FormDto> = (data) => {
     setShowSummary(true);
+    // dispatchAction
+    // router.push()
+    // api call
   };
 
   useEffect(() => {
