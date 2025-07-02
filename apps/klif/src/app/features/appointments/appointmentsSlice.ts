@@ -7,7 +7,7 @@ import {
   MedicalStaff,
 } from '../../../contracts/Contracts';
 
-interface AppointmentState {
+export interface AppointmentState {
   patient: Patient | null;
   service: Service | null;
   contract: Contract | null;

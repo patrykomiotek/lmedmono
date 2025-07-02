@@ -16,8 +16,7 @@ const ButtonComponent = forwardRef(
     { className, disabled, children, ...rest }: Props,
     ref: ForwardedRef<HTMLButtonElement>
   ) => {
-    const baseClasses =
-      'text-sm/6 text-white font-semibold cursor-pointer rounded-md px-4 py-2 font-semibold shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-transform duration-200';
+    const baseClasses = 'bg-blue-600';
 
     const normalClasses =
       'bg-blue-600 hover:bg-blue-500 dark:bg-accent-dark-500 dark:hover:bg-accent-dark-700 dark:disabled:bg-accent-dark-300';
