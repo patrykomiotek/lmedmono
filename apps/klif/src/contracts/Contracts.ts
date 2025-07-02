@@ -18,6 +18,16 @@ interface Contract {
   price: number;
 }
 
+// {
+//   patient: Patient | null,
+//   service: Service | null,
+//   contract: Contract | null,
+//   medicalStaff: MedicalStaff | null
+// },
+// {
+//   services: Service[]
+// }
+
 // 1. search Patient
 // 2. Service (usługa wybierana z listy, porada lekarska, mozna wybrać np. 5 usług)
 // 3. Contract dotyczy zarejestrowanej usługi (RegisteredService)

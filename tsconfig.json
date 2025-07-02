@@ -35,6 +35,9 @@
     },
     {
       "path": "./libs/documents-services"
+    },
+    {
+      "path": "./apps/klif-bff"
     }
   ]
 }
