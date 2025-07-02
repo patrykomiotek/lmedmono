@@ -1,4 +1,5 @@
 import { logger } from '../../logger/logger';
+import { Counter } from '../features/registration/Counter';
 
 export const HomePage = () => {
   const handleClick = () => {
@@ -16,6 +17,7 @@ export const HomePage = () => {
       <h1 className="text-3xl">Home</h1>
       <p>hello from home?</p>
       <button onClick={handleClick}>Click me</button>
+      <Counter />
     </div>
   );
 };

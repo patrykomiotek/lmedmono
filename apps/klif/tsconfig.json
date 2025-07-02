@@ -6,6 +6,9 @@
       "path": "../../libs/documents-components"
     },
     {
+      "path": "../../libs/common-ui"
+    },
+    {
       "path": "./tsconfig.app.json"
     },
     {

@@ -38,6 +38,9 @@
   "references": [
     {
       "path": "../../libs/documents-components/tsconfig.lib.json"
+    },
+    {
+      "path": "../../libs/common-ui/tsconfig.lib.json"
     }
   ]
 }
