@@ -1,18 +1,18 @@
-interface Patient {
+export interface Patient {
   uuid: string;
   firstName: string;
   lastName: string;
   pesel: string;
 }
 
-interface Service {
+export interface Service {
   uuid: string;
   name: string;
   code: string;
   description: string;
 }
 
-interface Contract {
+export interface Contract {
   uuid: string;
   name: string;
   price: number;
@@ -48,7 +48,7 @@ type CustomReadonly<T> = {
 
 type ReadonlyService = CustomReadonly<Service>;
 
-interface ExtendedService {
+export interface ExtendedService {
   uuid: string;
   name: string;
   service: Service;
@@ -56,28 +56,28 @@ interface ExtendedService {
   description: string;
 }
 
-interface RegisteredService {
+export interface RegisteredService {
   uuid: string;
   patient: Patient;
   contract: Contract;
   registrationStaff: RegisterStaff;
 }
 
-interface RegisteredServicePos {
+export interface RegisteredServicePos {
   uuid: string;
   personel: MedicalStaff;
   contract: Contract;
   registrationStaff: RegisterStaff;
 }
 
-interface RegisterStaff {
+export interface RegisterStaff {
   uuid: string;
   firstName: string;
   lastName: string;
   pesel: string;
 }
 
-interface MedicalStaff {
+export interface MedicalStaff {
   uuid: string;
   firstName: string;
   lastName: string;

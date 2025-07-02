@@ -1,5 +1,6 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { registrationReducer } from './features/registration/registrationSlice';
+import { appointmentReducer } from './features/appointments/appointmentsSlice';
 
 // instead of defining the reducers in the reducer field of configureStore, combine them here:
 // const rootReducer = combineReducers({ registration: registrationReducer });
@@ -7,6 +8,7 @@ import { registrationReducer } from './features/registration/registrationSlice';
 export const store = configureStore({
   reducer: {
     registration: registrationReducer,
+    appointment: appointmentReducer,
     // service: serviceReducer,
 
     // reducer: rootReducer,
