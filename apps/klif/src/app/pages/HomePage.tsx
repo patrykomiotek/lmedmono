@@ -1,4 +1,5 @@
 import { logger } from '../../logger/logger';
+import { RegistrationForm } from '../components/RegistrationForm/RegistrationForm';
 import { Counter } from '../features/registration/Counter';
 
 export const HomePage = () => {
@@ -14,10 +15,13 @@ export const HomePage = () => {
 
   return (
     <div>
-      <h1 className="text-3xl">Home</h1>
-      <p>hello from home?</p>
-      <button onClick={handleClick}>Click me</button>
-      <Counter />
+      {/* <h1 className="text-3xl">Home</h1> */}
+      {/* <p>hello from home?</p> */}
+
+      <RegistrationForm />
+
+      {/* <button onClick={handleClick}>Click me</button> */}
+      {/* <Counter /> */}
     </div>
   );
 };
