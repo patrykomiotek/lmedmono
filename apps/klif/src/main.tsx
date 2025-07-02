@@ -2,6 +2,11 @@ import { StrictMode } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import * as ReactDOM from 'react-dom/client';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { ReactKeycloakProvider } from '@react-keycloak/web';
+// import { KeycloakProvider } from "keycloak-react-web";
+
+import { keycloak } from './keycloak';
+
 import App from './app/app';
 
 import './styles.css';
@@ -15,8 +20,15 @@ const root = ReactDOM.createRoot(
 
 const queryClient = new QueryClient();
 
+const initOptions = {
+  onLoad: 'check-sso', // Silently check for an existing SSO session
+  pkceMethod: 'S256',
+  silentCheckSsoRedirectUri: window.location.origin + '/silent-check-sso.html',
+};
+
 root.render(
-  <StrictMode>
+  // <StrictMode> dont work in dev mode
+  <ReactKeycloakProvider authClient={keycloak}>
     <Provider store={store}>
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
@@ -25,5 +37,6 @@ root.render(
         <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
     </Provider>
-  </StrictMode>
+  </ReactKeycloakProvider>
+  // </StrictMode>
 );
