@@ -1,5 +1,6 @@
 import { AirtableListResponse, DocumentDto } from './types/Document.js';
 import { api } from './api';
+import { ZodError } from 'zod';
 // import axios, { AxiosStatic } from 'axios';
 
 // class DocumentService {
@@ -45,9 +46,20 @@ export const fetchDocument = async (id?: string) => {
 
   try {
     const response = await api.get<DocumentDto>(`/documents/${id}`);
+
+    // validationSchema.parse(response.data); // trows Error
+    // validationSchema.parseAsync(response.data)
+
     return response.data;
-  } catch {
-    console.log(`Error fetch document: ${id}`);
+  } catch (error) {
+    if (error instanceof ZodError) {
+      console.error(`Error fetch document: ${id}`);
+
+      // modified
+      // return {}
+    }
+
+    console.error(`Error fetch document: ${id}`);
     return null;
   }
 };

@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 
 const host = process.env.HOST ?? 'localhost';
 const port = process.env.PORT ? Number(process.env.PORT) : 3000;
@@ -86,6 +87,14 @@ app.get('/medstuff', (req, res) => {
 app.get('/medstuff/101', (req, res) => {
   res.send(testMedicalStaff);
 });
+
+app.use(
+  cors({
+    origin: 'http://localhost:4900',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  })
+);
 
 app.listen(port, host, () => {
   console.log(`[ ready ] http://${host}:${port}`);
