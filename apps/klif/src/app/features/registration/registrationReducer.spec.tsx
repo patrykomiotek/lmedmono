@@ -1,11 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { registrationReducer } from './registrationSlice';
-import {
-  reset,
-  decrement,
-  increment,
-  incrementByAmount,
-} from './registrationSlice';
+import { decrement, increment, incrementByAmount } from './registrationSlice';
 
 describe('registration reducer', () => {
   let store: ReturnType<typeof createTestStore>;
