@@ -34,7 +34,7 @@ export const registrationSlice = createSlice({
   },
 });
 
-export const { reset, increment, decrement, incrementByAmount } =
+export const { increment, decrement, incrementByAmount } =
   registrationSlice.actions;
 
 // Other code such as selectors can use the imported `RootState` type

@@ -39,4 +39,11 @@ describe('registration reducer', () => {
 
     expect(state.registration.value).toBe(3);
   });
+
+  it('should increment by 123', () => {
+    store.dispatch(incrementByAmount(123)); // { type: 'registration/increment' }
+    const state = store.getState();
+
+    expect(state.registration.value).toBe(128);
+  });
 });
