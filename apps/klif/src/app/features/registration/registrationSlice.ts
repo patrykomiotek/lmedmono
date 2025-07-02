@@ -16,6 +16,10 @@ export const registrationSlice = createSlice({
   // `createSlice` will infer the state type from the `initialState` argument
   initialState,
   reducers: {
+    reset: (state) => {
+      state = initialState;
+    },
+
     increment: (state) => {
       state.value += 1;
 
@@ -34,7 +38,7 @@ export const registrationSlice = createSlice({
   },
 });
 
-export const { increment, decrement, incrementByAmount } =
+export const { reset, increment, decrement, incrementByAmount } =
   registrationSlice.actions;
 
 // Other code such as selectors can use the imported `RootState` type
