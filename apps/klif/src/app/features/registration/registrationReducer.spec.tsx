@@ -1,4 +1,5 @@
-import { store } from '../../store';
+import { configureStore } from '@reduxjs/toolkit';
+import { registrationReducer } from './registrationSlice';
 import {
   reset,
   decrement,
@@ -7,9 +8,18 @@ import {
 } from './registrationSlice';
 
 describe('registration reducer', () => {
-  afterEach(() => {
-    // TODO: reset after each test
-    store.dispatch(reset());
+  let store: ReturnType<typeof createTestStore>;
+
+  const createTestStore = () => {
+    return configureStore({
+      reducer: {
+        registration: registrationReducer,
+      },
+    });
+  };
+
+  beforeEach(() => {
+    store = createTestStore();
   });
 
   it('should have set initial state', () => {
@@ -25,7 +35,7 @@ describe('registration reducer', () => {
     expect(state.registration.value).toBe(6);
   });
 
-  it('should decrement twice 2', () => {
+  it('should decrement twice', () => {
     // act, await
     store.dispatch(decrement());
     store.dispatch(decrement());

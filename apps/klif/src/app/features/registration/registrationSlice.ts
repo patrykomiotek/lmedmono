@@ -16,9 +16,7 @@ export const registrationSlice = createSlice({
   // `createSlice` will infer the state type from the `initialState` argument
   initialState,
   reducers: {
-    reset: (state) => {
-      state = initialState;
-    },
+    reset: () => initialState,
 
     increment: (state) => {
       state.value += 1;
